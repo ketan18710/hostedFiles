@@ -1,4 +1,5 @@
 (function(){
+  const STYLE_CSS = 'https://ketan18710.github.io/hostedFiles/style.css'
   loadJS("https://code.jquery.com/jquery-3.5.1.min.js")
   // jQuery.noConflict();
   var div = document.createElement('div')
@@ -7,14 +8,13 @@
   div.classList.add('modal')
   var id = setInterval(function()
   {
-      console.log('x')
         if(window.jQuery)
         {
-            clearInterval(id);
-            loadJS("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js")
-            loadCSS("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" )
-            loadCSS("../src/style.css" )
-            getForm(success,error)
+          loadJS("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js")
+          loadCSS("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" )
+          loadCSS(STYLE_CSS)
+          getForm(success,error)
+          clearInterval(id);
         }
   }, 1000);
     document.body.appendChild(div)
