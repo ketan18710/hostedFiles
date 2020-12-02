@@ -1,7 +1,10 @@
+(function name(template_id,imageURL,body) {
+  displayModal(template_id,imageURL,body)
+})()
 const getTemplates = (template_id,body,image)=>{
   switch (template_id) {
     case `template_1`: 
-      return `<div id="GR__popup_Template1" class="GR__popupContainer show_modal dimmer">
+      return `<div id="GR__popup_Template1" class="GR__popupContainer modal_hidden dimmer">
           <div class="GR__popup">
             <div class="GR__popup_image">
               <img src=${image} class="image" >
@@ -19,7 +22,7 @@ const getTemplates = (template_id,body,image)=>{
       break;
   }
 }
-const displayModal = ()=>{
+const displayModal = (template_id,imageURL,body)=>{
   let popupContainer = document.getElementsByClassName('GR__popupContainer')
   console.log(popupContainer)
   if(popupContainer.length>0){
@@ -27,8 +30,8 @@ const displayModal = ()=>{
     popupContainer.classList.remove('modal_hidden')
     popupContainer.classList.add('show_modal')
   }else{
-    const imageUrl = 'https://www.mayoclinichealthsystem.org/-/media/national-files/images/hometown-health/2019/running-shoes-on-paved-trail.jpg?h=370&w=660&la=en&hash=EF0A1D8B952FBA06002A40167735BF14'
-    let template = getTemplates('template_1','ketan',imageUrl)
+    // const imageUrl = 'https://www.mayoclinichealthsystem.org/-/media/national-files/images/hometown-health/2019/running-shoes-on-paved-trail.jpg?h=370&w=660&la=en&hash=EF0A1D8B952FBA06002A40167735BF14'
+    let template = getTemplates(template_id,body,imageURL)
     template = document.createRange().createContextualFragment(template)
     console.log(template)
     document.body.appendChild(template)
