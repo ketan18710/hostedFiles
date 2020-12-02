@@ -1,6 +1,4 @@
-(function name(template_id,imageURL,body) {
-  displayModal(template_id,imageURL,body)
-})()
+alert(1)
 const getTemplates = (template_id,body,image)=>{
   switch (template_id) {
     case `template_1`: 
