@@ -1,0 +1,74 @@
+body {
+  font-size: 16px;
+}
+
+.GR__popupContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.GR__popup {
+  width: 40%;
+  height: fit-content;
+  margin: auto;
+  position: relative;
+  max-width: none;
+}
+
+.GR__popup_body {
+  background-color: aqua;
+}
+
+.GR__popup_Closebutton {
+  top: 0;
+  right: 0;
+  position: absolute;
+  /* width: 11px; */
+  height: fit-content;
+  background: unset;
+  border: none;
+  opacity: 0.5;
+}
+
+.GR__popup_Closebutton:active {
+  background: unset;
+  border: none;
+}
+
+.GR__popup_Closebutton:hover {
+  background: unset;
+  border: none;
+  transform: rotateY(180deg);
+  transition-duration: 1s;
+  /* transition: transform 300ms,opacity 200ms; */
+}
+
+.GR__popup_Closebutton:focus {
+  background: unset;
+  border: none;
+  outline: none;
+}
+
+.modal_hidden {
+  display: none;
+}
+
+.show_modal {
+  display: block;
+}
+
+#GR__popup_Template1 .GR__popup_image {
+  width: 100%;
+}
+#GR__popup_Template1 .GR__popup_image img {
+  width: 100%;
+}
+#GR__popup_Template1 .GR__popup_body {
+  width: 70%;
+  margin: 2.5rem auto;
+}
+
+/*# sourceMappingURL=output.css.map */
